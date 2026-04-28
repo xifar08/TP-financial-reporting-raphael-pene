@@ -1,5 +1,5 @@
-from utils import get_data, clean_data
-from config import URL
+from utils import get_data, clean_data, generate_excel
+from config import URL, PATH_FILE
 
 
 def main():
@@ -7,6 +7,8 @@ def main():
 
     df = clean_data(df)
     print(df.head())
+
+    generate_excel(df, PATH_FILE)
 
 
 if __name__ == "__main__":
